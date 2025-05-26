@@ -67,7 +67,7 @@ h1 {
 @media (min-width: 992px) {
   .col-lg-4 {
     float: left;
-    width: 33.33%; /* Each takes equal space */
+    width: 31.7%; /* Each takes equal space */
   }
   
 }
