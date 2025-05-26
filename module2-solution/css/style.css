@@ -1,1 +1,96 @@
 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 20px; /* Overall page margin */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --- SECTION STYLES --- */
+.section {
+  background-color: lightgray;
+  border: 1px solid black;
+  margin: 10px; /* Space between sections and from edges */
+  padding: 20px; /* Padding inside the section for text */
+  position: relative; /* For positioning the title region */
+}
+
+.section p {
+  padding-top: 30px; /* Pushes text down to avoid overlapping title region */
+  color: palevioletred;
+}
+
+/* --- SECTION TITLE REGION STYLES --- */
+.section-title-region {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; /* Example width */
+  height: 30px; /* Example height */
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 24px; /* 25% larger than dummy text */
+}
+
+.section-title-region h2 {
+  margin: 0;
+  color: white; /* Text color for titles */
+  font-size: 16px; /* Adjusted to fit the region */
+}
+
+/* Specific colors for each title region */
+.chicken {
+  background-color:brown; /* Brownish red */
+}
+
+.beef {
+  background-color: darkred /* Dark red */
+}
+
+.sushi {
+  background-color: goldenrod; /* Goldenrod */
+}
+
+/* --- RESPONSIVE LAYOUT (MEDIA QUERIES) --- */
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+  .col-lg-4 {
+    float: left;
+    width: 33.33%; /* Each takes equal space */
+  }
+  
+}
+
+/* Tablet View (between 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6 {
+    /* First two sections */
+    float: left;
+    width: 50%;
+  }
+  .col-md-12 {
+    /* Third section */
+    float: left; /* Still needs float for layout consistency */
+    width: 100%;
+  }
+}
+
+/* Mobile View (767px or less) */
+@media (max-width: 767px) {
+  .col-sm-12 {
+    float: none; /* Remove float */
+    width: 100%; /* Each takes full width */
+    margin-bottom: 20px; /* Add vertical space between sections */
+  }
+}
